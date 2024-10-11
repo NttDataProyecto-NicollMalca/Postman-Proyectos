@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "e9d86ad0-203e-4c93-a6a3-9c861a95155e",
+		"name": "SegundoProyecto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28402845"
+	},
+	"item": [
+		{
+			"name": "/transacciones/deposito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountId\": \"867728\",\r\n  \"type\": \"DEPOSITO\",\r\n  \"amount\": 500.00,\r\n  \"date\": \"2024-10-07T12:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/transacciones/deposito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"transacciones",
+						"deposito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transacciones/retiro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountId\": \"867728\",\r\n  \"type\": \"RETIRO\",\r\n  \"amount\": 200.00,\r\n  \"date\": \"2024-10-07T13:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/transacciones/retiro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"transacciones",
+						"retiro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transacciones/transferencia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fromAccountId\": \"867728\",\r\n  \"toAccountId\": \"992218\",\r\n  \"amount\": 100.00,\r\n  \"date\": \"2024-10-07T14:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/transacciones/transferencia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"transacciones",
+						"transferencia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/transaccionesHistorial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/transacciones/historial",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"transacciones",
+						"historial"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
